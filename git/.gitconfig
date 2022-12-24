@@ -1,0 +1,13 @@
+[include]
+  path = ~/.gitconfig.local
+[core]
+  excludesFile = ~/gitignore_global
+  quotepath = false
+[init]
+  defaultBranch = master
+[pull]
+  rebase = true
+[push]
+  autoSetupRemote = true
+  default = upstream
+
