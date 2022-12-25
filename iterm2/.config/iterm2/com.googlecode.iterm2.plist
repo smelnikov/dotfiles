@@ -234,10 +234,14 @@
 			<string></string>
 			<key>Cursor Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.37647059999999999</real>
+				<real>0.99607843137254903</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.64705880000000005</real>
+				<real>0.99607843137254903</real>
 				<key>Red Component</key>
 				<real>1</real>
 			</dict>
@@ -256,12 +260,16 @@
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.16862745098039217</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>1</real>
+				<real>0.16862745098039217</real>
 				<key>Red Component</key>
-				<real>1</real>
+				<real>0.16862745098039217</real>
 			</dict>
 			<key>Cursor Type</key>
 			<integer>2</integer>
@@ -2343,6 +2351,8 @@
 	</dict>
 	<key>WindowNumber</key>
 	<true/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
