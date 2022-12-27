@@ -1,0 +1,5 @@
+Plug 'tpope/vim-surround'
+
+source ~/.vimrc
+
+:map <leader>pp <Action>(CloseProject)
