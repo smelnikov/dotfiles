@@ -618,7 +618,7 @@
 			<key>Normal Font</key>
 			<string>HackNerdFontCompleteM-Regular 12</string>
 			<key>Only The Default BG Color Uses Transparency</key>
-			<false/>
+			<true/>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
