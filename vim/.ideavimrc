@@ -3,4 +3,6 @@ Plug 'preservim/nerdtree'
 
 source ~/.vimrc
 
+set sneak
+
 :map <leader>pp <Action>(CloseProject)
