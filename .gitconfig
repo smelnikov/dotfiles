@@ -1,8 +1,8 @@
 [include]
   path = ~/.gitconfig.local
 [core]
-  excludesFile = ~/gitignore_global
   quotepath = false
+  excludesFile = ~/.gitignore_global
 [init]
   defaultBranch = master
 [pull]
