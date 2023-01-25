@@ -8,4 +8,18 @@ lsp.ensure_installed({
     'pyright',
 })
 
+lsp.set_preferences({
+    suggest_lsp_servers = false,
+    sign_icons = {
+        error = 'E',
+        warn = 'W',
+        hint = 'H',
+        info = 'I'
+    }
+})
+
 lsp.setup()
+
+vim.diagnostic.config ({
+    virtial_text = true,
+})
