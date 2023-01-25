@@ -7,9 +7,13 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'Mofiqul/dracula.nvim'
-  use ({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
-  use ('mbbill/undotree')
-  use ('tpope/vim-fugitive')
+  use {
+      'nvim-treesitter/nvim-treesitter', 
+      run = ':TSUpdate'
+  }
+  use 'mbbill/undotree'
+  use 'tpope/vim-fugitive'
+  use 'tpope/vim-surround'
   use {
       'VonHeikemen/lsp-zero.nvim',
       branch = 'v1.x',
@@ -32,7 +36,7 @@ return require('packer').startup(function(use)
           {'rafamadriz/friendly-snippets'}, -- Optional
       }
   }
-  use('preservim/nerdtree')
+  use 'preservim/nerdtree'
 
 end)
 
