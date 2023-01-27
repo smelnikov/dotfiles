@@ -62,15 +62,23 @@ end)
 
 lsp.setup()
 
-local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
+require('mason-null-ls').setup {
+  ensure_installed = {
+    'black',
+    'isort',
+    'prettierd',
+    'stylua',
+  },
+}
 
 local null_ls = require 'null-ls'
+local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
 
 null_ls.setup {
   sources = {
+    null_ls.builtins.diagnostics.eslint,
     null_ls.builtins.formatting.black,
     null_ls.builtins.formatting.isort,
-    null_ls.builtins.diagnostics.eslint,
     null_ls.builtins.formatting.prettierd,
     null_ls.builtins.formatting.stylua,
   },
