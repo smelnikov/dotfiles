@@ -10,4 +10,7 @@
 [push]
   autoSetupRemote = true
   default = upstream
-
+[diff]
+  tool = nvimdiff
+[difftool]
+	prompt = false
