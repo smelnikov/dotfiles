@@ -22,6 +22,14 @@ lsp.configure('sumneko_lua', {
   },
 })
 
+local cmp = require 'cmp'
+cmp.setup {
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
+}
+
 lsp.set_preferences {
   suggest_lsp_servers = false,
   sign_icons = {
