@@ -1,3 +1,9 @@
+require('dracula').setup {
+  colors = {
+    visual = '#55596D',
+  },
+}
+
 function ColorThings(color)
   color = color or 'dracula'
   vim.cmd.colorscheme(color)
