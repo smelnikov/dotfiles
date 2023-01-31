@@ -8,6 +8,12 @@ vim.keymap.set(
 )
 vim.keymap.set(
   'n',
+  '<leader>lg',
+  builtin.live_grep,
+  { desc = 'Telescope [L]ive [G]rep' }
+)
+vim.keymap.set(
+  'n',
   '<C-p>',
   builtin.git_files,
   { desc = 'Telescope Git-files' }
