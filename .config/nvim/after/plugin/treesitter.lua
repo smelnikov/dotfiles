@@ -9,6 +9,7 @@ require('nvim-treesitter.configs').setup {
     'git_rebase',
     'gitcommit',
     'gitignore',
+    'haskell',
     'help',
     'html',
     'javascript',
