@@ -1,6 +1,0 @@
-Plug 'tpope/vim-surround'
-Plug 'preservim/nerdtree'
-
-source ~/.vimrc
-
-:map <leader>pp <Action>(CloseProject)
