@@ -43,6 +43,7 @@ return require('packer').startup {
       'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true },
     }
+    use 'stevearc/dressing.nvim'
   end,
   config = {
     display = {
