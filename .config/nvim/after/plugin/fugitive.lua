@@ -1,5 +1,3 @@
-local builtin = require 'telescope.builtin'
-
 vim.keymap.set(
   'n',
   '<leader>gs',
@@ -8,13 +6,19 @@ vim.keymap.set(
 )
 vim.keymap.set(
   'n',
+  '<leader>gl',
+  '<cmd>Git log<cr>',
+  { desc = 'Fugitive [G]it [L]og' }
+)
+vim.keymap.set(
+  'n',
   '<leader>gb',
-  builtin.git_branches,
-  { desc = 'Telescope [G]it [B]ranches' }
+  '<cmd>Git branch<cr>',
+  { desc = 'Fugitive [G]it [B]ranches' }
 )
 vim.keymap.set(
   'n',
   '<leader>gc',
-  builtin.git_commits,
-  { desc = 'Telescope [G]it [C]ommits' }
+  '<cmd>Git log -- %<cr>',
+  { desc = 'Fugitive [G]it file [C]ommits' }
 )
