@@ -11,11 +11,11 @@ require('lualine').setup {
     lualine_z = { 'location' },
   },
   winbar = {
-    lualine_a = { 'filename' },
+    lualine_a = { { 'filename', path = 1 } },
     lualine_x = { 'diff', 'diagnostics' },
   },
   inactive_winbar = {
-    lualine_a = { 'filename' },
+    lualine_a = { { 'filename', path = 1 } },
     lualine_x = { 'diff', 'diagnostics' },
   },
 }
