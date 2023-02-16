@@ -1,14 +1,12 @@
 require('lualine').setup {
   options = {
     globalstatus = true,
+    theme = 'dracula-nvim',
   },
   sections = {
-    lualine_a = { 'mode' },
     lualine_b = {},
     lualine_c = {},
     lualine_x = { 'branch' },
-    lualine_y = { 'progress' },
-    lualine_z = { 'location' },
   },
   winbar = {
     lualine_a = { { 'filename', path = 1 } },

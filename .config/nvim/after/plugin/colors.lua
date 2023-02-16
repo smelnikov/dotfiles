@@ -1,16 +1,14 @@
-require('dracula').setup {
+local dracula = require 'dracula'
+
+dracula.setup {
   colors = {
     visual = '#55596D',
   },
+  transparent_bg = true,
+  lualine_bg_color = dracula.colors().bg,
+  overrides = {
+    StatusLine = { bg = nil },
+  },
 }
 
-function ColorThings(color)
-  color = color or 'dracula'
-  vim.cmd.colorscheme(color)
-
-  vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
-  vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
-  vim.api.nvim_set_hl(0, 'SignColumn', { fg = 'none' })
-end
-
-ColorThings()
+vim.cmd.colorscheme 'dracula'
