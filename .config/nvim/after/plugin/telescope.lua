@@ -1,4 +1,17 @@
+local telescope = require 'telescope'
 local builtin = require 'telescope.builtin'
+
+telescope.setup {
+  defaults = {
+    layout_config = {
+      width = 0.95,
+      height = 0.95,
+      horizontal = {
+        preview_width = 0.6,
+      },
+    },
+  },
+}
 
 vim.keymap.set(
   'n',
