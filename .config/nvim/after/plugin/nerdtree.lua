@@ -6,7 +6,6 @@ vim.keymap.set(
   vim.cmd.NERDTreeFocus,
   { desc = 'Focus [T]ree' }
 )
-vim.keymap.set('n', '<C-t>', vim.cmd.NERDTreeToggle, { desc = 'Toggle tree' })
 vim.keymap.set(
   'n',
   '<C-f>',
