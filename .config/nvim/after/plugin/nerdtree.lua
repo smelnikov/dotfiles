@@ -1,4 +1,12 @@
 vim.g.NERDTreeShowHidden = 1
+vim.g.NERDTreeShowLineNumbers = 1
+
+vim.api.nvim_create_autocmd({ 'FileType' }, {
+  pattern = 'nerdtree',
+  callback = function()
+    vim.opt_local.relativenumber = true
+  end,
+})
 
 vim.keymap.set(
   'n',
