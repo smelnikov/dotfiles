@@ -9,6 +9,8 @@ lsp.ensure_installed {
   'rust_analyzer',
   'pyright',
   'lua_ls',
+  'cssls',
+  'cssmodules_ls',
 }
 
 -- Fix Undefined global 'vim'
@@ -40,7 +42,7 @@ lsp.set_preferences {
   },
 }
 
-lsp.on_attach(function(_, bufnr)
+lsp.on_attach(function(client, bufnr)
   local function opts(desc)
     return { buffer = bufnr, remap = false, desc = desc }
   end
@@ -66,6 +68,15 @@ lsp.on_attach(function(_, bufnr)
     builtin.lsp_document_symbols,
     opts '[D]ocument [S]ymbols'
   )
+
+  if client.name == 'eslint' then
+    client.server_capabilities.documentFormattingProvider = true
+  end
+
+  if client.name == 'tsserver' then
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentRangeFormattingProvider = false
+  end
 end)
 
 lsp.setup()
@@ -97,7 +108,12 @@ null_ls.setup {
         group = augroup,
         buffer = bufnr,
         callback = function()
-          vim.lsp.buf.format { bufnr = bufnr }
+          vim.lsp.buf.format {
+            bufnr = bufnr,
+            filter = function(c)
+              return c.supports_method 'textDocument/formatting'
+            end,
+          }
         end,
       })
     end
