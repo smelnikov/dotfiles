@@ -77,6 +77,10 @@ lsp.on_attach(function(client, bufnr)
     client.server_capabilities.documentFormattingProvider = false
     client.server_capabilities.documentRangeFormattingProvider = false
   end
+
+  if client.name == 'cssmodules_ls' then
+    client.server_capabilities.definitionProvider = false
+  end
 end)
 
 lsp.setup()
