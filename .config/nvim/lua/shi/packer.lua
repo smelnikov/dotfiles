@@ -39,6 +39,7 @@ return require('packer').startup {
         { 'rafamadriz/friendly-snippets' },
       },
     }
+    use 'rosmanov/vim-ride'
     use 'preservim/nerdtree'
     use {
       'nvim-lualine/lualine.nvim',
