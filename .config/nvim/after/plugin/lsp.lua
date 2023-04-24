@@ -68,7 +68,12 @@ lsp.on_attach(function(client, bufnr)
     builtin.lsp_document_symbols,
     opts '[D]ocument [S]ymbols'
   )
-
+  vim.keymap.set(
+    { 'n', 'v' },
+    '<space>ca',
+    vim.lsp.buf.code_action,
+    opts '[C]ode [A]ction'
+  )
   if client.name == 'eslint' then
     client.server_capabilities.documentFormattingProvider = true
   end
