@@ -7,6 +7,12 @@ shell:
 window:
   opacity: 0.9
   decorations: buttonless
+  dimensions:
+    columns: 160
+    lines: 40
+  position:
+    x: 1500
+    y: 1000
 
 font:
   normal:
@@ -68,3 +74,5 @@ colors:
     magenta: "#ff92df"
     cyan: "#a4ffff"
     white: "#ffffff"
+key_bindings:
+  - { key: F12, action: ToggleMaximized }
