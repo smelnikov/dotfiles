@@ -13,14 +13,14 @@ window:
   position:
     x: 1500
     y: 1000
-
 font:
   normal:
     family: Hack Nerd Font Mono
   size: 13
   offset:
-    y: 7
-
+    y: 6
+  glyph_offset:
+    y: 3
 # Dracula theme
 colors:
   primary:
