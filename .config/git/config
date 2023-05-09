@@ -1,8 +1,5 @@
-[include]
-  path = ~/.gitconfig.local
 [core]
   quotepath = false
-  excludesFile = ~/.gitignore_global
 [init]
   defaultBranch = master
 [pull]
@@ -13,4 +10,7 @@
 [diff]
   tool = nvimdiff
 [difftool]
-	prompt = false
+  prompt = false
+[user]
+  name = Sergei Melnikov
+  email = smelnikov@uniqsoft.ae
