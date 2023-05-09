@@ -10,6 +10,9 @@ dracula.setup {
   overrides = {
     StatusLine = { bg = nil },
     EndOfBuffer = { link = 'LineNr' },
+    DiffAdd = { bg = '#277a3c' },
+    DiffChange = { bg = '#7a5833', fg = nil },
+    DiffText = { fg = nil },
   },
 }
 
