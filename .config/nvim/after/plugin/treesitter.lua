@@ -10,7 +10,6 @@ require('nvim-treesitter.configs').setup {
     'gitcommit',
     'gitignore',
     'haskell',
-    'help',
     'html',
     'javascript',
     'json5',
@@ -24,6 +23,7 @@ require('nvim-treesitter.configs').setup {
     'tsx',
     'typescript',
     'vim',
+    'vimdoc',
     'yaml',
   },
 
