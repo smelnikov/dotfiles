@@ -11,7 +11,11 @@ return require('packer').startup {
     use 'Mofiqul/dracula.nvim'
     use {
       'nvim-treesitter/nvim-treesitter',
-      run = ':TSUpdate',
+      run = function()
+        local ts_update =
+          require('nvim-treesitter.install').update { with_sync = true }
+        ts_update()
+      end,
     }
     use 'nvim-treesitter/nvim-treesitter-context'
     use 'mbbill/undotree'
