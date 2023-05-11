@@ -14,15 +14,7 @@ lsp.ensure_installed {
 }
 
 -- Fix Undefined global 'vim'
-lsp.configure('lua_ls', {
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { 'vim' },
-      },
-    },
-  },
-})
+lsp.nvim_workspace()
 
 local cmp = require 'cmp'
 cmp.setup {
