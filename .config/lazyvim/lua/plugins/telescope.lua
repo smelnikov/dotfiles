@@ -36,6 +36,17 @@ return {
       silent = true,
     },
   },
+  opts = {
+    defaults = {
+      layout_config = {
+        width = 0.95,
+        height = 0.95,
+        horizontal = {
+          preview_width = 0.6,
+        },
+      },
+    },
+  },
   config = function(_, opts)
     require('telescope').setup(opts)
     pcall(require('telescope').load_extension, 'fzf')
