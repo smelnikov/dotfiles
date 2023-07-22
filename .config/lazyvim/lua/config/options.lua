@@ -1,4 +1,4 @@
-vim.opt.guicursor = ""
+vim.opt.guicursor = ''
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -13,7 +13,7 @@ vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undodir = os.getenv 'HOME' .. '/.vim/undodir'
 vim.opt.undofile = true
 
 vim.opt.hlsearch = false
@@ -26,9 +26,17 @@ vim.opt.gdefault = true
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 7
-vim.opt.signcolumn = "yes"
-vim.opt.isfname:append("@-@")
+vim.opt.signcolumn = 'yes'
+vim.opt.isfname:append '@-@'
 
 vim.opt.updatetime = 60
 
-vim.opt.colorcolumn = "88"
+vim.opt.colorcolumn = '88'
+
+vim.diagnostic.config {
+  float = { border = 'single' },
+  virtual_text = false,
+}
+vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
+  border = 'single',
+})
