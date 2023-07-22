@@ -3,6 +3,7 @@ return {
   branch = '0.1.x',
   dependencies = {
     'nvim-lua/plenary.nvim',
+    'pschmitt/telescope-yadm.nvim',
     {
       'nvim-telescope/telescope-fzf-native.nvim',
       cond = vim.fn.executable 'make' == 1,
@@ -25,7 +26,7 @@ return {
     {
       desc = 'Git files',
       '<C-p>',
-      ':Telescope git_files<CR>',
+      ':Telescope git_or_yadm_files<CR>',
       silent = true,
     },
 
@@ -50,5 +51,6 @@ return {
   config = function(_, opts)
     require('telescope').setup(opts)
     pcall(require('telescope').load_extension, 'fzf')
+    pcall(require('telescope').load_extension, 'git_or_yadm_files')
   end,
 }
