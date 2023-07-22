@@ -35,6 +35,7 @@ return {
           'html',
           'jsonls',
           'lua_ls',
+          'pyright',
           'rust_analyzer',
           'stylelint_lsp',
           'taplo',
