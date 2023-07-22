@@ -35,4 +35,15 @@ return {
   {
     'tpope/vim-surround',
   },
+  {
+    'seanbreckenridge/yadm-git.vim',
+    dependencies = {
+      'tpope/vim-fugitive',
+    },
+    config = function()
+      vim.g.yadm_git_enabled = 1
+      vim.g.yadm_git_fugitive_enabled = 1
+      vim.g.yadm_git_gitgutter_enabled = 0
+    end,
+  },
 }
