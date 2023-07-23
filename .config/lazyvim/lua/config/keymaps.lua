@@ -13,5 +13,6 @@ keymap('[D]iagnostic: Next', 'n', ']d', vim.diagnostic.goto_next)
 keymap('[D]iagnostic: Prev', 'n', '[d', vim.diagnostic.goto_prev)
 keymap('Dia[g]nostics: Open F[l]oat', 'n', 'gl', vim.diagnostic.open_float)
 
+keymap('LSP: [F]ind Refere[n]ces', 'n', '<leader>fn', vim.lsp.buf.references)
 keymap('LSP: [R]e[n]ame Symbol', 'n', '<leader>rn', vim.lsp.buf.rename)
 keymap('LSP: Code [A]ction', { 'n', 'v' }, '<leader>a', vim.lsp.buf.code_action)
