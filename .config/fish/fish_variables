@@ -1,7 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export VIRTUAL_ENV_DISABLE_PROMPT:1
-SETUVAR --export NVIM_APPNAME:lazyvim
 SETUVAR --export EDITOR:nvim
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
