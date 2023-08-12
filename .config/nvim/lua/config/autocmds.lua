@@ -5,6 +5,10 @@ local lsp_handle_capability = require('utils').lsp_handle_capability
 autocmd('Setup LSP', 'LspAttach', function(event)
   local client = vim.lsp.get_client_by_id(event.data.client_id)
 
+  if client.name == 'ruff_lsp' then
+    client.server_capabilities.hoverProvider = false
+  end
+
   lsp_handle_capability(event.buf, client, 'hoverProvider', function()
     keymap(
       'LSP: Hover Documentation',
