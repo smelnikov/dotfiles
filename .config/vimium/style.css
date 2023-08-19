@@ -1,0 +1,173 @@
+:root {
+  /* Dracula color scheme */
+  --color-background: #282a36;
+  --color-foreground: #f8f8f2;
+  --color-selection: #44475a;
+  --color-comment: #6272a4;
+  --color-red: #ff5555;
+  --color-orange: #ffb86c;
+  --color-yellow: #f1fa8c;
+  --color-green: #50fa7b;
+  --color-purple: #bd93f9;
+  --color-cyan: #8be9fd;
+  --color-pink: #ff79c6;
+}
+/* Link hint boxes */
+div > .vimiumHintMarker {
+  background: var(--color-background);
+  font-size: 1em;
+  border: 1.5px solid var(--color-orange);
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+/* Link hint text */
+div > .vimiumHintMarker span {
+  color: var(--color-foreground);
+  font-size: inherit;
+  text-shadow: none;
+}
+
+/* Link hint matching characters */
+div > .vimiumHintMarker > .matchingCharacter {
+  color: var(--color-comment);
+}
+
+/* HUD ("heads-up display") bar */
+div.vimiumHUD {
+  background: var(--color-background);
+  border: 1px solid var(--color-orange);
+  border-radius: 4px;
+  inset: 0 0 auto auto;
+}
+
+div.vimiumHUD .vimiumHUDSearchArea {
+  background: var(--color-background);
+  border-radius: 4px;
+  padding: 4px;
+}
+
+div.vimiumHUD .hud-find {
+  background: var(--color-background);
+  border: none;
+  color: var(--color-foreground);
+}
+
+div.vimiumHUD span#hud-find-input {
+  color: var(--color-foreground);
+}
+
+div.vimiumHUD span#hud-match-count {
+  color: var(--color-orange);
+}
+
+div.vimiumHUD .vimiumHUDSearchAreaInner {
+  color: var(--color-orange);
+  padding: 4px;
+}
+
+#vomnibar {
+  background-color: var(--color-selection);
+  border-radius: 8px;
+  border: 1px solid var(--color-purple);
+}
+
+#vomnibar input {
+  color: var(--color-foreground);
+  padding: 1em;
+  height: 40px;
+  background-color: var(--color-background);
+  border-radius: 8px;
+  border: none;
+  box-shadow: none;
+}
+
+#vomnibar .vomnibarSearchArea {
+  padding: 0;
+  border-radius: 8px;
+  border: none;
+}
+
+#vomnibar ul {
+  background-color: var(--color-selection);
+  border-radius: 0 8px 8px;
+  padding-block: 0;
+  margin-block: 0;
+}
+
+#vomnibar li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: var(--color-foreground);
+}
+
+#vomnibar li .vomnibarTopHalf,
+#vomnibar li .vomnibarBottomHalf {
+  word-break: break-all;
+}
+
+#vomnibar li .vomnibarBottomHalf {
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+#vomnibar li .vomnibarSource {
+  float: left;
+  color: var(--color-purple);
+  margin: 0;
+}
+
+#vomnibar li .vomnibarSource.vomnibarNoInsertText,
+#vomnibar li .vomnibarSource.vomnibarInsertText {
+  display: none;
+}
+
+#vomnibar li .vomnibarRelevancy {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: monospace;
+  width: 100px;
+  overflow: hidden;
+}
+
+#vomnibar li .vomnibarUrl {
+  color: var(--color-green);
+}
+
+#vomnibar li .vomnibarMatch {
+  font-weight: bold;
+  color: var(--color-orange);
+}
+
+#vomnibar li em,
+#vomnibar li .vomnibarTitle {
+  color: var(--color-foreground);
+  margin-left: 4px;
+  font-weight: normal;
+}
+#vomnibar li em {
+  font-style: italic;
+}
+#vomnibar li em .vomnibarMatch,
+#vomnibar li .vomnibarTitle .vomnibarMatch {
+  color: var(--color-orange);
+}
+
+#vomnibar li.vomnibarSelected {
+  background-color: var(--color-comment);
+  font-weight: normal;
+}
+
+#vomnibarInput::selection {
+  background-color: var(--color-cyan);
+}
+
