@@ -40,6 +40,28 @@
   --color-vomnibar-choice-selected: var(--color-comment);
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Catpuccin latte color scheme */
+    --color-background: #eff1f5;
+    --color-foreground: #4c4f69;
+    --color-selection: #ccd0da;
+    --color-comment: #6c6f85;
+    --color-red: #d20f39;
+    --color-orange: #fe640b;
+    --color-yellow: #df8e1d;
+    --color-green: #40a02b;
+    --color-purple: #8839ef;
+    --color-cyan: #04a5e5;
+    --color-pink: #ea76cb;
+
+    --color-vomnibar-border: var(--color-pink);
+    --color-vomnibar-background: #e6e9ef;
+    --color-vomnibar-choices-background: var(--color-vomnibar-background);
+    --color-vomnibar-choice-selected: var(--color-selection);
+  }
+}
+
 /* Link hint boxes */
 div.internalVimiumHintMarker.vimiumHintMarker {
   background: var(--color-hint-background);
@@ -61,6 +83,7 @@ div.vimiumHUD {
   background: var(--color-hud-background);
   border: 1px solid var(--color-hud-border);
   border-radius: 4px;
+  box-shadow: none;
   inset: 0 0 auto auto;
 }
 
@@ -93,6 +116,7 @@ div.vimiumHUD .vimiumHUDSearchAreaInner {
   background-color: var(--color-vomnibar-background);
   border-radius: 8px;
   border: 1px solid var(--color-vomnibar-border);
+  box-shadow: none;
 }
 
 #vomnibar input {
