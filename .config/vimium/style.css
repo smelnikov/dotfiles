@@ -11,72 +11,95 @@
   --color-purple: #bd93f9;
   --color-cyan: #8be9fd;
   --color-pink: #ff79c6;
+
+  --color-hint-border: var(--color-orange);
+  --color-hint-background: var(--color-background);
+  --color-hint-text: var(--color-foreground);
+
+  --color-hud-border: var(--color-orange);
+  --color-hud-background: var(--color-background);
+  --color-hud-find: var(--color-foreground);
+  --color-hud-find-input: var(--color-foreground);
+  --color-hud-match-count: var(--color-orange);
+  --color-hud-search-area-inner: var(--color-orange);
+
+  --color-vomnibar-background: var(--color-selection);
+  --color-vomnibar-border: var(--color-purple);
+  --color-vomnibar-input: var(--color-foreground);
+  --color-vomnibar-input-selection: var(--color-selection);
+  --color-vomnibar-input-background: var(--color-background);
+  --color-vomnibar-choices-background: var(--color-selection);
+  --color-vomnibar-choice: var(--color-foreground);
+  --color-vomnibar-choice-source: var(--color-purple);
+  --color-vomnibar-choice-relevancy: var(--color-purple);
+  --color-vomnibar-choice-relevancy-background: var(--color-purple);
+  --color-vomnibar-choice-url: var(--color-green);
+  --color-vomnibar-choice-match: var(--color-orange);
+  --color-vomnibar-choice-title: var(--color-foreground);
+  --color-vomnibar-choice-title-match: var(--color-orange);
+  --color-vomnibar-choice-selected: var(--color-comment);
 }
+
 /* Link hint boxes */
 div.internalVimiumHintMarker.vimiumHintMarker {
-  background: var(--color-background);
+  background: var(--color-hint-background);
   font-size: 12.5px;
-  border: 1px solid var(--color-orange);
+  border: 1px solid var(--color-hint-border);
   border-radius: 4px;
   box-shadow: none;
 }
 
 /* Link hint text */
 div.internalVimiumHintMarker.vimiumHintMarker span {
-  color: var(--color-foreground);
+  color: var(--color-hint-text);
   font-size: inherit;
   text-shadow: none;
 }
 
-/* Link hint matching characters */
-div > .vimiumHintMarker > .matchingCharacter {
-  color: var(--color-comment);
-}
-
-/* HUD ("heads-up display") bar */
+/* HUD */
 div.vimiumHUD {
-  background: var(--color-background);
-  border: 1px solid var(--color-orange);
+  background: var(--color-hud-background);
+  border: 1px solid var(--color-hud-border);
   border-radius: 4px;
   inset: 0 0 auto auto;
 }
 
 div.vimiumHUD .vimiumHUDSearchArea {
-  background: var(--color-background);
+  background: var(--color-hud-background);
   border-radius: 4px;
   padding: 4px;
 }
 
 div.vimiumHUD .hud-find {
-  background: var(--color-background);
+  background: var(--color-hud-background);
   border: none;
-  color: var(--color-foreground);
+  color: var(--color-hud-find);
 }
 
 div.vimiumHUD span#hud-find-input {
-  color: var(--color-foreground);
+  color: var(--color-hud-find-input);
 }
 
 div.vimiumHUD span#hud-match-count {
-  color: var(--color-orange);
+  color: var(--color-hud-match-count);
 }
 
 div.vimiumHUD .vimiumHUDSearchAreaInner {
-  color: var(--color-orange);
+  color: var(--color-hud-search-area-inner);
   padding: 4px;
 }
 
 #vomnibar {
-  background-color: var(--color-selection);
+  background-color: var(--color-vomnibar-background);
   border-radius: 8px;
-  border: 1px solid var(--color-purple);
+  border: 1px solid var(--color-vomnibar-border);
 }
 
 #vomnibar input {
-  color: var(--color-foreground);
+  color: var(--color-vomnibar-input);
   padding: 1em;
   height: 40px;
-  background-color: var(--color-background);
+  background-color: var(--color-vomnibar-input-background);
   border-radius: 8px;
   border: none;
   box-shadow: none;
@@ -89,7 +112,7 @@ div.vimiumHUD .vimiumHUDSearchAreaInner {
 }
 
 #vomnibar ul {
-  background-color: var(--color-selection);
+  background-color: var(--color-vomnibar-choices-background);
   border-radius: 0 8px 8px;
   padding-block: 0;
   margin-block: 0;
@@ -102,7 +125,7 @@ div.vimiumHUD .vimiumHUDSearchAreaInner {
   border: none;
   padding: 10px 20px;
   font-size: 16px;
-  color: var(--color-foreground);
+  color: var(--color-vomnibar-choice);
 }
 
 #vomnibar li .vomnibarTopHalf,
@@ -118,7 +141,7 @@ div.vimiumHUD .vimiumHUDSearchAreaInner {
 
 #vomnibar li .vomnibarSource {
   float: left;
-  color: var(--color-purple);
+  color: var(--color-vomnibar-choice-source);
   margin: 0;
 }
 
@@ -132,42 +155,44 @@ div.vimiumHUD .vimiumHUDSearchAreaInner {
   right: 0;
   top: 0;
   padding: 5px;
-  background-color: var(--color-background);
-  color: var(--color-foreground);
+  background-color: var(--color-vomnibar-choice-relevancy-background);
+  color: var(--color-vomnibar-choice-relevancy);
   font-family: monospace;
   width: 100px;
   overflow: hidden;
 }
 
 #vomnibar li .vomnibarUrl {
-  color: var(--color-green);
+  color: var(--color-vomnibar-choice-url);
 }
 
 #vomnibar li .vomnibarMatch {
   font-weight: bold;
-  color: var(--color-orange);
+  color: var(--color-vomnibar-choice-match);
 }
 
 #vomnibar li em,
 #vomnibar li .vomnibarTitle {
-  color: var(--color-foreground);
+  color: var(--color-vomnibar-choice-title);
   margin-left: 4px;
   font-weight: normal;
 }
+
 #vomnibar li em {
   font-style: italic;
 }
+
 #vomnibar li em .vomnibarMatch,
 #vomnibar li .vomnibarTitle .vomnibarMatch {
-  color: var(--color-orange);
+  color: var(--color-vomnibar-choice-title-match);
 }
 
 #vomnibar li.vomnibarSelected {
-  background-color: var(--color-comment);
+  background-color: var(--color-vomnibar-choice-selected);
   font-weight: normal;
 }
 
 #vomnibarInput::selection {
-  background-color: var(--color-cyan);
+  background-color: var(--color-vomnibar-input-selection);
 }
 
