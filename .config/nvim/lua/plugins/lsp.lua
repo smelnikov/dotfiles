@@ -142,13 +142,6 @@ return {
         function(source_name, methods)
           require 'mason-null-ls.automatic_setup'(source_name, methods)
         end,
-        prettier = function()
-          require('null-ls').register(
-            require('null-ls.builtins.formatting.prettier').with {
-              only_local = 'node_modules/.bin',
-            }
-          )
-        end,
       },
     },
   },
