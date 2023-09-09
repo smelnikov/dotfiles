@@ -91,6 +91,19 @@ return {
               },
             }
           end,
+          rust_analyzer = function()
+            require('lspconfig').rust_analyzer.setup {
+              capabilities,
+              cmd = { 'rustup', 'run', 'stable', 'rust-analyzer' },
+              settings = {
+                ['rust-analyzer'] = {
+                  checkOnSave = {
+                    command = 'clippy',
+                  },
+                },
+              },
+            }
+          end,
           stylelint_lsp = function()
             require('lspconfig').stylelint_lsp.setup {
               capabilities,
