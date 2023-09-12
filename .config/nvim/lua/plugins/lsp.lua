@@ -32,6 +32,7 @@ return {
           'cssls',
           'cssmodules_ls',
           'eslint',
+          'elixirls',
           'html',
           'jsonls',
           'lua_ls',
