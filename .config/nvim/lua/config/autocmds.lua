@@ -66,3 +66,13 @@ autocmd('Setup LSP', 'LspAttach', function(event)
     end
   )
 end)
+
+autocmd('Netrw', 'FileType', function(event)
+  keymap(
+    'Netrw: [o]pen',
+    'n',
+    'o',
+    '<cr>',
+    { buffer = event.buf, remap = true }
+  )
+end, { pattern = 'netrw' })

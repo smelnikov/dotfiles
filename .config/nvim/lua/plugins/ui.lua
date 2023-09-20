@@ -1,35 +1,5 @@
 return {
   {
-    'preservim/nerdtree',
-    lazy = false,
-    keys = {
-      {
-        desc = 'Focus [T]ree',
-        '<leader>t',
-        ':NERDTreeFocus<CR>',
-        silent = true,
-      },
-      {
-        desc = 'Find current buffer in tree',
-        '<C-f>',
-        ':NERDTreeFind<CR>',
-        silent = true,
-      },
-    },
-    config = function()
-      vim.g.NERDTreeShowHidden = 1
-      vim.g.NERDTreeShowLineNumbers = 1
-      vim.g.NERDTreeQuitOnOpen = 1
-
-      vim.api.nvim_create_autocmd({ 'FileType' }, {
-        pattern = 'nerdtree',
-        callback = function()
-          vim.opt_local.relativenumber = true
-        end,
-      })
-    end,
-  },
-  {
     'nvim-lualine/lualine.nvim',
     event = 'VeryLazy',
     opts = {
