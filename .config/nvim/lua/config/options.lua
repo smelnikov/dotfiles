@@ -42,5 +42,5 @@ vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
   border = 'single',
 })
 
-vim.g.netrw_keepj = ''
+vim.g.netrw_use_errorwindow = 0
 vim.g.netrw_bufsettings = 'noma nomod nu relativenumber nowrap ro nobl'
