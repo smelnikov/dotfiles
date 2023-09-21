@@ -10,6 +10,7 @@ return {
       build = 'make',
     },
   },
+  cmd = 'Telescope',
   keys = {
     {
       desc = '[F]ind in [P]roject',
