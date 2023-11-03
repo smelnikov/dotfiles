@@ -1,28 +1,5 @@
 return {
   {
-    'nvim-lualine/lualine.nvim',
-    event = 'VeryLazy',
-    opts = {
-      options = {
-        globalstatus = true,
-        theme = 'dracula-nvim',
-      },
-      sections = {
-        lualine_b = {},
-        lualine_c = {},
-        lualine_x = { 'branch' },
-      },
-      winbar = {
-        lualine_a = { { 'filename', path = 1 } },
-        lualine_x = { 'diff', 'diagnostics' },
-      },
-      inactive_winbar = {
-        lualine_a = { { 'filename', path = 1 } },
-        lualine_x = { 'diff', 'diagnostics' },
-      },
-    },
-  },
-  {
     'Mofiqul/dracula.nvim',
     lazy = false,
     priority = 1000,
@@ -34,7 +11,7 @@ return {
       transparent_bg = true,
       lualine_bg_color = 'none',
       overrides = {
-        StatusLine = { bg = nil },
+        StatusLine = { fg = '#f8f8f2', bg = '#44475a' },
         EndOfBuffer = { link = 'LineNr' },
         DiffAdd = { bg = '#277a3c' },
         DiffChange = { bg = '#7a5833', fg = nil },

@@ -34,6 +34,9 @@ vim.opt.updatetime = 60
 
 vim.opt.colorcolumn = '88'
 
+vim.opt.winbar = ' '
+vim.opt.laststatus = 3
+
 vim.diagnostic.config {
   float = { border = 'single' },
   virtual_text = false,
