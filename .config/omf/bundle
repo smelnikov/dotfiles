@@ -3,5 +3,4 @@ package foreign-env
 package https://github.com/dracula/fish
 package node-binpath
 package nvm
-theme bobthefish
 theme default
