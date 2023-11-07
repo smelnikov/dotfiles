@@ -1,14 +1,21 @@
 function fish_prompt
+  set -l last_status $status
+
+  set -l normal_color (set_color normal)
+  set -l error_color  (set_color brred)
+  set -l python_color (set_color bryellow)
+  set -l node_color   (set_color brgreen)
+  set -l repo_color   (set_color cyan)
+
   if not set -q VIRTUAL_ENV_DISABLE_PROMPT
     set -g VIRTUAL_ENV_DISABLE_PROMPT true
   end
 
-  set -l cwd (prompt_pwd)
+  if test -n "$last_status" -a $last_status -ne 0
+    echo -ns $error_color "($last_status)" $normal_color " "
+  end
 
-  set -l normal_color     (set_color normal)
-  set -l python_color     (set_color bryellow)
-  set -l node_color     (set_color brgreen)
-  set -l repo_color (set_color cyan)
+  set -l cwd (prompt_pwd)
 
   if type -q nvm; and type -q node
       set node_version (node -v 2>/dev/null) 
