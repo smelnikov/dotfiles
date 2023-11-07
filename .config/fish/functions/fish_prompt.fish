@@ -11,11 +11,7 @@ function fish_prompt
     set -g VIRTUAL_ENV_DISABLE_PROMPT true
   end
 
-  set -l bg_jobs
-  jobs -p >/dev/null
-  and set bg_jobs 1
-
-  if test -n "$bg_jobs"
+  if jobs -p >/dev/null
     echo -ns "%" " "
   end
 
