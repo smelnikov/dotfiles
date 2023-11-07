@@ -23,21 +23,21 @@ function fish_prompt
 
   if type -q nvm; and type -q node
       set node_version (node -v 2>/dev/null) 
-      echo -n -s $node_color $node_version $normal_color " "
+      echo -ns $node_color $node_version $normal_color " "
   end
 
   if test -n "$VIRTUAL_ENV"
     set venv (basename $VIRTUAL_ENV)
-    echo -n -s $python_color $venv $normal_color " "
+    echo -ns $python_color $venv $normal_color " "
   end
 
-  echo -n -s $normal_color $cwd $normal_color
+  echo -ns $normal_color $cwd $normal_color " "
 
   if git_is_repo
-    echo -n -s " " $repo_color (git_branch_name) $normal_color " "
+    echo -ns $repo_color (git_branch_name) $normal_color " "
   end
 
   echo
   # Line 2
-  echo -n -s "> "
+  echo -n "> "
 end
