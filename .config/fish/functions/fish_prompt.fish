@@ -11,6 +11,14 @@ function fish_prompt
     set -g VIRTUAL_ENV_DISABLE_PROMPT true
   end
 
+  set -l bg_jobs
+  jobs -p >/dev/null
+  and set bg_jobs 1
+
+  if test -n "$bg_jobs"
+    echo -ns "%" " "
+  end
+
   if test -n "$last_status" -a $last_status -ne 0
     echo -ns $error_color "($last_status)" $normal_color " "
   end
