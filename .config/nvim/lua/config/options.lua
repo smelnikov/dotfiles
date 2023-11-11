@@ -32,8 +32,6 @@ vim.opt.isfname:append '@-@'
 
 vim.opt.updatetime = 60
 
-vim.opt.colorcolumn = '88'
-
 vim.opt.winbar = ' '
 vim.opt.laststatus = 3
 
