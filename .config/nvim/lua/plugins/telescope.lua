@@ -30,13 +30,6 @@ return {
       ':Telescope git_or_yadm_files<CR>',
       silent = true,
     },
-
-    {
-      desc = '[B]uffers',
-      '<leader>b',
-      ':Telescope buffers<CR>',
-      silent = true,
-    },
   },
   opts = {
     defaults = {
