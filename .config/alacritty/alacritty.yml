@@ -11,8 +11,8 @@ window:
     columns: 160
     lines: 40
   position:
-    x: 1500
-    y: 1000
+    x: 2000
+    y: 1500
 font:
   normal:
     family: Hack Nerd Font Mono
