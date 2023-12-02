@@ -15,19 +15,6 @@ return {
         ':Git log<CR>',
         silent = true,
       },
-      {
-        desc = '[G]it Bra[N]ches',
-        '<leader>gn',
-        ':Git branch<CR>',
-        silent = true,
-      },
-
-      {
-        desc = '[G]it file Comm[I]ts',
-        '<leader>gi',
-        ':Git log -- %<CR>',
-        silent = true,
-      },
     },
   },
   {
