@@ -10,6 +10,12 @@ return {
         silent = true,
       },
       {
+        desc = '[G]it [O]neline',
+        '<leader>go',
+        ':Git log --oneline<CR>',
+        silent = true,
+      },
+      {
         desc = '[G]it [L]og',
         '<leader>gl',
         ':Git log<CR>',
