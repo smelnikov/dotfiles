@@ -10,14 +10,14 @@ return {
         silent = true,
       },
       {
-        desc = '[G]it [O]neline',
-        '<leader>go',
+        desc = '[G]it [L]og: Oneline',
+        '<leader>gl',
         ':Git log --oneline<CR>',
         silent = true,
       },
       {
-        desc = '[G]it [L]og',
-        '<leader>gl',
+        desc = '[G]it Log: Verb[o]se',
+        '<leader>go',
         ':Git log<CR>',
         silent = true,
       },
