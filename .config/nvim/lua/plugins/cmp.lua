@@ -22,7 +22,7 @@ return {
 
       return {
         mapping = {
-          ['<C-space>'] = cmp.mapping.confirm { select = true },
+          ['<C-y>'] = cmp.mapping.confirm { select = true },
           ['<C-e>'] = cmp.mapping.abort(),
           ['<C-u>'] = cmp.mapping.scroll_docs(-5),
           ['<C-d>'] = cmp.mapping.scroll_docs(5),
