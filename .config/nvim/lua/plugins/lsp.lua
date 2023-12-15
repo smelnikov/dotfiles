@@ -147,7 +147,6 @@ return {
     },
     opts = {
       ensure_installed = {
-        'black',
         'isort',
         'prettier',
         'stylua',
