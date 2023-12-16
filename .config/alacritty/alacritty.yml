@@ -13,6 +13,7 @@ window:
   position:
     x: 2000
     y: 1300
+  option_as_alt: Both
 font:
   normal:
     family: Hack Nerd Font Mono
