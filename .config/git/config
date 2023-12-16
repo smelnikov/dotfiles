@@ -1,5 +1,8 @@
 [core]
   quotepath = false
+  pager = nvim -R -c 'set ft=git' -
+[color]
+  pager = no
 [init]
   defaultBranch = master
 [pull]
