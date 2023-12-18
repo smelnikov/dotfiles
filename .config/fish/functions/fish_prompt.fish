@@ -6,13 +6,15 @@ function fish_prompt
   set -l python_color (set_color bryellow)
   set -l node_color   (set_color brgreen)
   set -l repo_color   (set_color cyan)
+  set -l jobs_color   (set_color brmagenta)
 
   if not set -q VIRTUAL_ENV_DISABLE_PROMPT
     set -g VIRTUAL_ENV_DISABLE_PROMPT true
   end
 
-  if jobs -p >/dev/null
-    echo -ns "%" " "
+  set -l jobs_count (jobs | wc -l | tr -d " ")
+  if test $jobs_count -ne 0
+    echo -ns $jobs_color "%$jobs_count" $normal_color " "
   end
 
   if test -n "$last_status" -a $last_status -ne 0
