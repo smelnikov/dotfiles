@@ -43,5 +43,5 @@ function fish_prompt
 
   echo
   # Line 2
-  echo -n "> "
+  echo -n "··· "
 end
