@@ -18,7 +18,7 @@ function fish_prompt
   end
 
   if test -n "$last_status" -a $last_status -ne 0
-    echo -ns $error_color "($last_status)" $normal_color " "
+    echo -ns $error_color "!$last_status" $normal_color " "
   end
 
   set -l node_version
