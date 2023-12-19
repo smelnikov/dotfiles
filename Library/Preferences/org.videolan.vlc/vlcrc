@@ -3705,7 +3705,7 @@ audio-resampler=any
 audio-language=en
 
 # Subtitle language (string)
-sub-language=ru
+sub-language=en,ru
 
 # Menu language (string)
 #menu-language=
