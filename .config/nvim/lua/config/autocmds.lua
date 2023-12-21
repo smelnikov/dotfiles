@@ -7,6 +7,8 @@ autocmd('Setup LSP', 'LspAttach', function(event)
 
   if client.name == 'ruff_lsp' then
     client.server_capabilities.hoverProvider = false
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentRangeFormattingProvider = false
   end
 
   lsp_handle_capability(event.buf, client, 'hoverProvider', function()
