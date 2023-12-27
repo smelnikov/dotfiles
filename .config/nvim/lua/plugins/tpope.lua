@@ -27,6 +27,9 @@ return {
     'tpope/vim-commentary',
   },
   {
+    'tpope/vim-unimpaired',
+  },
+  {
     'tpope/vim-surround',
     dependencies = {
       'tpope/vim-repeat',
