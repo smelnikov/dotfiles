@@ -12,7 +12,7 @@ window:
     lines: 40
   position:
     x: 2000
-    y: 1300
+    y: 1280
   option_as_alt: Both
 font:
   normal:
