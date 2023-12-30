@@ -2,6 +2,7 @@ return {
   { 'tpope/vim-vinegar' },
   {
     'tpope/vim-fugitive',
+    event = 'VeryLazy',
     keys = {
       {
         desc = '[G]it [S]tatus',
@@ -34,16 +35,5 @@ return {
     dependencies = {
       'tpope/vim-repeat',
     },
-  },
-  {
-    'seanbreckenridge/yadm-git.vim',
-    dependencies = {
-      'tpope/vim-fugitive',
-    },
-    config = function()
-      vim.g.yadm_git_enabled = 1
-      vim.g.yadm_git_fugitive_enabled = 1
-      vim.g.yadm_git_gitgutter_enabled = 0
-    end,
   },
 }

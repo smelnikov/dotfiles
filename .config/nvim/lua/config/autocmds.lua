@@ -78,3 +78,20 @@ autocmd('Netrw', 'FileType', function(event)
     { buffer = event.buf, remap = true }
   )
 end, { pattern = 'netrw' })
+
+autocmd('Yadm git', { 'VimEnter', 'BufWinEnter' }, function()
+  vim.fn.jobstart(
+    { 'yadm', 'ls-files', '--error-unmatch', vim.fn.expand '%:p:h' },
+    {
+      on_exit = function(_, code, _)
+        if code ~= 0 then
+          return
+        end
+        vim.api.nvim_call_function(
+          'FugitiveDetect',
+          { '~/.local/share/yadm/repo.git' }
+        )
+      end,
+    }
+  )
+end)
