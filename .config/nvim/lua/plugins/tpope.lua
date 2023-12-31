@@ -1,5 +1,6 @@
 return {
   { 'tpope/vim-vinegar' },
+  { 'tpope/vim-unimpaired' },
   {
     'tpope/vim-fugitive',
     event = 'VeryLazy',
@@ -26,12 +27,11 @@ return {
   },
   {
     'tpope/vim-commentary',
-  },
-  {
-    'tpope/vim-unimpaired',
+    event = { 'BufReadPre', 'BufNewFile' },
   },
   {
     'tpope/vim-surround',
+    event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
       'tpope/vim-repeat',
     },
