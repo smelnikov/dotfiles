@@ -2,6 +2,9 @@ local keymap = require('utils').keymap
 
 keymap('Nop', 'n', '<space>', '<nop>')
 
+keymap('Recording', 'n', 'Q', 'q')
+keymap('Nop', 'n', 'q', '<nop>')
+
 keymap('[J]oin Lines', 'n', 'J', 'mzJ`z')
 keymap('Scroll [d]ownwards', 'n', '<C-d>', '<C-d>zz')
 keymap('Scroll [u]pwards', 'n', '<C-u>', '<C-u>zz')
