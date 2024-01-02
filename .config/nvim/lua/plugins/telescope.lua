@@ -32,15 +32,7 @@ return {
     },
   },
   opts = {
-    defaults = {
-      layout_config = {
-        width = 0.95,
-        height = 0.95,
-        horizontal = {
-          preview_width = 0.6,
-        },
-      },
-    },
+    defaults = { layout_strategy = 'vertical' },
   },
   config = function(_, opts)
     require('telescope').setup(opts)
