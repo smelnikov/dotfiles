@@ -11,6 +11,10 @@ return {
       transparent_bg = true,
       lualine_bg_color = 'none',
       overrides = {
+        HarpoonBorder = { link = 'FloatBorder' },
+        TelescopePromptBorder = { link = 'FloatBorder' },
+        TelescopeResultsBorder = { link = 'FloatBorder' },
+        TelescopePreviewBorder = { link = 'FloatBorder' },
         StatusLine = { fg = '#f8f8f2', bg = '#44475a' },
         EndOfBuffer = { link = 'LineNr' },
         DiffAdd = { bg = '#277a3c' },
