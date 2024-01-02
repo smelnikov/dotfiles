@@ -36,12 +36,11 @@ vim.opt.winbar = ' '
 vim.opt.laststatus = 3
 
 vim.diagnostic.config {
-  float = { border = 'single' },
   virtual_text = false,
+  float = { border = 'rounded' },
 }
-vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
-  border = 'single',
-})
+vim.lsp.handlers['textDocument/hover'] =
+  vim.lsp.with(vim.lsp.handlers.hover, { border = 'rounded' })
 
 vim.g.netrw_use_errorwindow = 0
 vim.g.netrw_bufsettings = 'noma nomod nu relativenumber nowrap ro nobl'
