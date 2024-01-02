@@ -15,7 +15,7 @@ return {
         TelescopePromptBorder = { link = 'FloatBorder' },
         TelescopeResultsBorder = { link = 'FloatBorder' },
         TelescopePreviewBorder = { link = 'FloatBorder' },
-        StatusLine = { fg = '#f8f8f2', bg = '#44475a' },
+        StatusLine = { link = 'CursorLine' },
         EndOfBuffer = { link = 'LineNr' },
         DiffAdd = { bg = '#277a3c' },
         DiffChange = { bg = '#7a5833', fg = nil },
