@@ -69,16 +69,6 @@ autocmd('Setup LSP', 'LspAttach', function(event)
   )
 end)
 
-autocmd('Netrw', 'FileType', function(event)
-  keymap(
-    'Netrw: [o]pen',
-    'n',
-    'o',
-    '<cr>',
-    { buffer = event.buf, remap = true }
-  )
-end, { pattern = 'netrw' })
-
 autocmd('Yadm git', { 'VimEnter', 'BufWinEnter' }, function()
   vim.fn.jobstart(
     { 'yadm', 'ls-files', '--error-unmatch', vim.fn.expand '%:p:h' },
