@@ -26,11 +26,9 @@ return {
 
       return {
         ensure_installed = {
-          'clangd',
           'cssls',
           'cssmodules_ls',
           'eslint',
-          'elixirls',
           'html',
           'jsonls',
           'lua_ls',
