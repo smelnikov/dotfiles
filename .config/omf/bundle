@@ -1,6 +1,5 @@
 package brew
 package foreign-env
 package https://github.com/dracula/fish
-package node-binpath
 package nvm
 theme default
