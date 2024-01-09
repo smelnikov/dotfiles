@@ -17,12 +17,6 @@ return {
         ':Git log --oneline<CR>',
         silent = true,
       },
-      {
-        desc = '[G]it Log: Verb[o]se',
-        '<leader>go',
-        ':Git log<CR>',
-        silent = true,
-      },
     },
   },
   {
