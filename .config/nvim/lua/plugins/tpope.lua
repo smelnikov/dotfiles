@@ -17,7 +17,16 @@ return {
         ':Git log --oneline<CR>',
         silent = true,
       },
+      {
+        desc = '[G]it: Bla[m]e',
+        '<leader>gm',
+        ':Git blame<CR>',
+        silent = true,
+      },
     },
+    config = function()
+      vim.g.fugitive_dynamic_colors = 0
+    end,
   },
   {
     'tpope/vim-commentary',
