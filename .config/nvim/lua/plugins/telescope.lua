@@ -33,6 +33,27 @@ return {
   },
   opts = {
     defaults = { layout_strategy = 'vertical' },
+    pickers = {
+      find_files = {
+        find_command = {
+          'fd',
+          '--type',
+          'f',
+          '--hidden',
+          '--no-ignore',
+          '--exclude',
+          'node_modules',
+          '--exclude',
+          'venv',
+          '--exclude',
+          '.git',
+        },
+      },
+      live_grep = {
+        additional_args = { '--hidden', '--no-ignore' },
+        glob_pattern = { '!**/node_modules/**', '!**/venv/**', '!**/.git/**' },
+      },
+    },
   },
   config = function(_, opts)
     require('telescope').setup(opts)
