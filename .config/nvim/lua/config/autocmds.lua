@@ -85,3 +85,13 @@ autocmd('Yadm git', { 'VimEnter', 'BufWinEnter' }, function()
     }
   )
 end)
+
+autocmd('Close some type of buffers with <gq>', 'FileType', function(event)
+  vim.bo[event.buf].buflisted = false
+  vim.keymap.set(
+    'n',
+    'gq',
+    ':bdelete<CR>',
+    { buffer = event.buf, silent = true }
+  )
+end, { pattern = { 'help', 'qf' } })
