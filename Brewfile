@@ -5,6 +5,7 @@ tap "homebrew/core"
 brew "python@3.11"
 brew "docker", link: false
 brew "docker-compose"
+brew "fd"
 brew "fish"
 brew "fzf"
 brew "git"
