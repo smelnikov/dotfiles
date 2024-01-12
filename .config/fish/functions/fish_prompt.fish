@@ -2,12 +2,14 @@ function fish_prompt
   set -l last_status $status
 
   set -l normal_color (set_color normal)
+  set -l jobs_color (set_color brmagenta)
   set -l error_color (set_color brred)
   set -l private_color (set_color brblue)
-  set -l python_color (set_color bryellow)
-  set -l node_color (set_color brgreen)
+
+  set -l cwd_color (set_color blue)
+  set -l python_color (set_color yellow)
+  set -l node_color (set_color green)
   set -l repo_color (set_color cyan)
-  set -l jobs_color (set_color brmagenta)
 
   if not set -q VIRTUAL_ENV_DISABLE_PROMPT
     set -g VIRTUAL_ENV_DISABLE_PROMPT true
@@ -40,7 +42,7 @@ function fish_prompt
   end
 
   set -l cwd (prompt_pwd)
-  echo -ns $normal_color $cwd $normal_color " "
+  echo -ns $cwd_color $cwd $normal_color " "
 
   if git_is_repo
     echo -ns $repo_color (git_branch_name) $normal_color " "
