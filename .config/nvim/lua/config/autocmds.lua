@@ -94,4 +94,4 @@ autocmd('Close some type of buffers with <gq>', 'FileType', function(event)
     ':bdelete<CR>',
     { buffer = event.buf, silent = true }
   )
-end, { pattern = { 'help', 'qf' } })
+end, { pattern = { 'help', 'qf', 'git' } })
