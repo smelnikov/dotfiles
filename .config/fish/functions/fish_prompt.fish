@@ -28,17 +28,8 @@ function fish_prompt
     echo -ns $error_color "!$last_status" $normal_color " "
   end
 
-  set -l node_version
-  if type -q nvm; and type -q node
-    set node_version (nvm current) 
-  end
-  if test -n "$node_version" -a "$node_version" != "system"
-    echo -ns $node_color $node_version $normal_color " "
-  end
-
   if test -n "$VIRTUAL_ENV"
-    set venv (basename $VIRTUAL_ENV)
-    echo -ns $python_color $venv $normal_color " "
+    echo -ns $python_color ^V $normal_color " "
   end
 
   set -l cwd (prompt_pwd)
