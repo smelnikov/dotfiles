@@ -20,6 +20,7 @@ return {
         DiffAdd = { bg = '#277a3c' },
         DiffChange = { bg = '#7a5833', fg = nil },
         DiffText = { fg = nil },
+        diffFile = { link = 'Comment' },
       },
     },
     config = function(_, opts)
