@@ -14,7 +14,7 @@ return {
       {
         desc = '[G]it [L]og: Oneline',
         '<leader>gl',
-        ':Git log --oneline<CR>',
+        ':Git log -23 --oneline<CR>',
         silent = true,
       },
       {
