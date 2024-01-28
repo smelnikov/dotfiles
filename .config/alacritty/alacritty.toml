@@ -62,9 +62,6 @@ text = "CellBackground"
 [font]
 size = 13
 
-[font.glyph_offset]
-y = 3
-
 [font.normal]
 family = "Hack Nerd Font Mono"
 
@@ -81,13 +78,13 @@ program = "/opt/homebrew/bin/fish"
 
 [window]
 decorations = "buttonless"
-opacity = 0.98
+opacity = 0.96
 option_as_alt = "Both"
 
 [window.dimensions]
-columns = 160
-lines = 40
+columns = 128
+lines = 32
 
 [window.position]
-x = 2000
-y = 1280
+x = 2096
+y = 1440
