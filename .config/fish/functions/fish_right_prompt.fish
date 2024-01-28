@@ -1,2 +1,1 @@
-function fish_right_prompt
-end
+function fish_right_prompt; end

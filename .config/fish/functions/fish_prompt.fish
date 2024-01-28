@@ -2,6 +2,7 @@ function fish_prompt
   set -l last_status $status
 
   set -l normal_color (set_color normal)
+
   set -l jobs_color (set_color brmagenta)
   set -l error_color (set_color brred)
   set -l private_color (set_color brblue)
@@ -10,6 +11,8 @@ function fish_prompt
   set -l python_color (set_color yellow)
   set -l node_color (set_color green)
   set -l repo_color (set_color cyan)
+
+  set -l cmd_color (set_color cyan)
 
   if not set -q VIRTUAL_ENV_DISABLE_PROMPT
     set -g VIRTUAL_ENV_DISABLE_PROMPT true
@@ -41,5 +44,5 @@ function fish_prompt
 
   echo
   # Line 2
-  echo -n "··· "
+  echo -ns $cmd_color ">" $normal_color " "
 end
