@@ -20,5 +20,13 @@ return {
     opts = {
       enable = true,
     },
+    keys = {
+      {
+        desc = 'Toggle context',
+        'yox',
+        ':TSContextToggle<CR>',
+        silent = true,
+      },
+    },
   },
 }
