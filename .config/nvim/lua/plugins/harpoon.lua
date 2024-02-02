@@ -9,13 +9,13 @@ return {
     local ui = require 'harpoon.ui'
     return {
       {
-        desc = 'Harpoon: Mar[k] file',
-        '<leader>k',
+        desc = 'Pin file',
+        '<leader>i',
         mark.add_file,
         silent = true,
       },
       {
-        desc = 'Harpoon: [Q]uick menu',
+        desc = 'Quick menu',
         '<C-q>',
         ui.toggle_quick_menu,
         silent = true,

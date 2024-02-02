@@ -13,13 +13,13 @@ return {
   cmd = 'Telescope',
   keys = {
     {
-      desc = '[F]ind in [P]roject',
+      desc = 'Find files',
       '<leader>fp',
       ':Telescope find_files<CR>',
       silent = true,
     },
     {
-      desc = '[L]ive [G]rep',
+      desc = 'Live grep',
       '<leader>lg',
       ':Telescope live_grep<CR>',
       silent = true,

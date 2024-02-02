@@ -6,19 +6,19 @@ return {
     event = 'VeryLazy',
     keys = {
       {
-        desc = '[G]it [S]tatus',
+        desc = 'Git status',
         '<leader>gs',
         ':Git<CR>',
         silent = true,
       },
       {
-        desc = '[G]it [L]og: Oneline',
-        '<leader>gl',
+        desc = 'Git log',
+        '<leader>go',
         ':Git log -23 --oneline<CR>',
         silent = true,
       },
       {
-        desc = '[G]it: Bla[m]e',
+        desc = 'Git blame',
         '<leader>gm',
         ':Git blame<CR>',
         silent = true,
