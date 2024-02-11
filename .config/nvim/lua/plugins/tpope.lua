@@ -39,4 +39,7 @@ return {
       'tpope/vim-repeat',
     },
   },
+  {
+    'tpope/vim-dadbod',
+  },
 }
