@@ -35,6 +35,8 @@ vim.opt.updatetime = 60
 vim.opt.winbar = ' '
 vim.opt.laststatus = 3
 
+vim.opt.shelltemp = false
+
 vim.diagnostic.config {
   virtual_text = false,
   float = { border = 'rounded' },
