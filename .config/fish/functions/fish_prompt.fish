@@ -14,10 +14,6 @@ function fish_prompt
 
   set -l cmd_color (set_color cyan)
 
-  if not set -q VIRTUAL_ENV_DISABLE_PROMPT
-    set -g VIRTUAL_ENV_DISABLE_PROMPT true
-  end
-
   if test -n "$fish_private_mode"
     echo -ns $private_color "*P" $normal_color " "
   end
