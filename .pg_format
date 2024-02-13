@@ -1,0 +1,6 @@
+comma=start
+spaces=2
+wrap-limit=88
+wrap-comment=1
+placeholder=%\([\w\d\-_]+\)s
+no-space-function=1
