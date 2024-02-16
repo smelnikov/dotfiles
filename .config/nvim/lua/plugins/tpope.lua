@@ -41,5 +41,15 @@ return {
   },
   {
     'tpope/vim-dadbod',
+    event = 'VeryLazy',
+    keys = {
+      {
+        desc = 'Execute query',
+        mode = 'x',
+        '<C-M>',
+        ':DB<CR>',
+        ft = { 'sql' },
+      },
+    },
   },
 }
