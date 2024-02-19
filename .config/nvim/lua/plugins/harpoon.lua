@@ -20,6 +20,18 @@ return {
         ui.toggle_quick_menu,
         silent = true,
       },
+      {
+        desc = 'Prev pin',
+        '[v',
+        ui.nav_prev,
+        silent = true,
+      },
+      {
+        desc = 'Next pin',
+        ']v',
+        ui.nav_next,
+        silent = true,
+      },
     }
   end,
 }
