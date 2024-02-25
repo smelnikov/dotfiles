@@ -4248,13 +4248,13 @@ key-jump+long=Shift-l
 #global-key-subdelay-up=
 
 # Subtitle delay up (string)
-key-subdelay-up=
+key-subdelay-up=q
 
 # Subtitle delay down (string)
 #global-key-subdelay-down=
 
 # Subtitle delay down (string)
-key-subdelay-down=
+key-subdelay-down=Shift-q
 
 # Subtitle sync / bookmark audio timestamp (string)
 #global-key-subsync-markaudio=
