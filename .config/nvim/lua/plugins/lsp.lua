@@ -138,21 +138,22 @@ return {
       {
         'nvimtools/none-ls.nvim',
         dependencies = { 'nvim-lua/plenary.nvim' },
-        opts = {},
+        opts = function()
+          local f = require 'null-ls'.builtins.formatting
+          return {
+            sources = {
+              f.black,
+              f.isort,
+              f.prettier,
+              f.stylua,
+            },
+          }
+        end,
       },
     },
     opts = {
-      ensure_installed = {
-        'black',
-        'isort',
-        'prettier',
-        'stylua',
-      },
-      handlers = {
-        function(source_name, methods)
-          require 'mason-null-ls.automatic_setup'(source_name, methods)
-        end,
-      },
+      ensure_installed = nil,
+      automatic_installation = true,
     },
   },
 }
