@@ -1,4 +1,5 @@
 return {
+  { 'tpope/vim-sleuth' },
   { 'tpope/vim-vinegar' },
   { 'tpope/vim-unimpaired' },
   {
