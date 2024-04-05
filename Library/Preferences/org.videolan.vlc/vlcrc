@@ -4026,7 +4026,7 @@ hotkeys-x-wheel-mode=-1
 #global-key-toggle-fullscreen=
 
 # Fullscreen (string)
-#key-toggle-fullscreen=Command+f
+key-toggle-fullscreen=Ctrl-f
 
 # Exit fullscreen (string)
 #global-key-leave-fullscreen=
