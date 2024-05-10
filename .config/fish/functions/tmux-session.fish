@@ -1,6 +1,6 @@
 function tmux-session -a cwd
   if test ! -n "$cwd"
-    set cwd (find ~/IdeaProjects -mindepth 2 -maxdepth 2 -type d | fzf)
+    set cwd (find ~/Projects -mindepth 2 -maxdepth 2 -type d | fzf)
   end
   set -l name (basename "$cwd" | tr '[:upper:]' '[:lower:]')
 
