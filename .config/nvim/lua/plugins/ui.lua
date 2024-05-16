@@ -21,6 +21,8 @@ return {
         DiffChange = { bg = '#7a5833', fg = nil },
         DiffText = { fg = nil },
         diffFile = { link = 'Comment' },
+        WinBar = { link = 'NormalFloat' },
+        WinBarNC = { link = 'NormalFloat' },
       },
     },
     config = function(_, opts)
