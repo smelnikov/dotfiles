@@ -30,10 +30,6 @@ return {
     end,
   },
   {
-    'tpope/vim-commentary',
-    event = { 'BufReadPre', 'BufNewFile' },
-  },
-  {
     'tpope/vim-surround',
     event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
