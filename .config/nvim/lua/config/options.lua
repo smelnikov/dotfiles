@@ -37,6 +37,8 @@ vim.opt.laststatus = 3
 
 vim.opt.shelltemp = false
 
+vim.opt.mouse = ''
+
 vim.diagnostic.config {
   virtual_text = false,
   float = { border = 'rounded' },
