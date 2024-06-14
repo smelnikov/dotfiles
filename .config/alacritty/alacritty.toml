@@ -72,6 +72,9 @@ y = 6
 action = "ToggleMaximized"
 key = "F12"
 
+[mouse]
+hide_when_typing = true
+
 [shell]
 args = ["-l", "-c", "tmux attach || tmux"]
 program = "/opt/homebrew/bin/fish"
