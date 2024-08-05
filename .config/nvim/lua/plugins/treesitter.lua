@@ -6,11 +6,7 @@ return {
     build = ':TSUpdateSync',
     opts = {
       auto_install = true,
-      highlight = {
-        additional_vim_regex_highlighting = false,
-        enable = true,
-      },
-      indent = { enable = true },
+      highlight = { enable = true },
     },
   },
   {
