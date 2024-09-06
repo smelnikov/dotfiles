@@ -40,7 +40,7 @@ autocmd('Setup LSP', 'LspAttach', function(event)
     client.server_capabilities.documentRangeFormattingProvider = false
   end
 
-  if client.name == 'tsserver' then
+  if client.name == 'ts_ls' then
     client.server_capabilities.documentFormattingProvider = false
     client.server_capabilities.documentRangeFormattingProvider = false
   end

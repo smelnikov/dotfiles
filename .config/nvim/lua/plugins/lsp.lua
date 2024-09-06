@@ -110,7 +110,7 @@ return {
             }
           end,
           tsserver = function()
-            require('lspconfig').tsserver.setup {
+            require('lspconfig').ts_ls.setup {
               capabilities,
               settings = {
                 completions = { completeFunctionCalls = true },
@@ -138,7 +138,7 @@ return {
         'nvimtools/none-ls.nvim',
         dependencies = { 'nvim-lua/plenary.nvim' },
         opts = function()
-          local f = require 'null-ls'.builtins.formatting
+          local f = require('null-ls').builtins.formatting
           return {
             sources = {
               f.black,
