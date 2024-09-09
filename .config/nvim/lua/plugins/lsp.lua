@@ -36,7 +36,7 @@ return {
           'ruff_lsp',
           'stylelint_lsp',
           'taplo',
-          'tsserver',
+          'ts_ls',
           'yamlls',
         },
         handlers = {
@@ -109,7 +109,7 @@ return {
               },
             }
           end,
-          tsserver = function()
+          ts_ls = function()
             require('lspconfig').ts_ls.setup {
               capabilities,
               settings = {
