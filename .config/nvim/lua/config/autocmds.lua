@@ -5,7 +5,7 @@ local lsp_handle_capability = require('utils').lsp_handle_capability
 autocmd('Setup LSP', 'LspAttach', function(event)
   local client = vim.lsp.get_client_by_id(event.data.client_id)
 
-  if client.name == 'ruff_lsp' then
+  if client.name == 'ruff' then
     client.server_capabilities.hoverProvider = false
     client.server_capabilities.documentFormattingProvider = false
     client.server_capabilities.documentRangeFormattingProvider = false

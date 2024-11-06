@@ -33,7 +33,7 @@ return {
           'jsonls',
           'lua_ls',
           'pyright',
-          'ruff_lsp',
+          'ruff',
           'stylelint_lsp',
           'taplo',
           'ts_ls',
