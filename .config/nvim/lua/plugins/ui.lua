@@ -23,6 +23,7 @@ return {
         diffFile = { link = 'Comment' },
         WinBar = { link = 'NormalFloat' },
         WinBarNC = { link = 'NormalFloat' },
+        Pmenu = { link = 'NormalFloat' },
       },
     },
     config = function(_, opts)
