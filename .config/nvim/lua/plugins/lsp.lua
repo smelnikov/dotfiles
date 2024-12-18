@@ -16,13 +16,10 @@ return {
       },
       'mason.nvim',
       'neovim/nvim-lspconfig',
-      'hrsh7th/cmp-nvim-lsp',
       'b0o/schemastore.nvim',
     },
     opts = function()
-      local capabilities = require('cmp_nvim_lsp').default_capabilities(
-        vim.lsp.protocol.make_client_capabilities()
-      )
+      local capabilities = require('blink.cmp').get_lsp_capabilities(nil, true)
 
       return {
         ensure_installed = {
