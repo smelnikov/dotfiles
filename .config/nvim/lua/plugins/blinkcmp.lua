@@ -7,6 +7,7 @@ return {
       keymap = {
         preset = 'default',
         ['<C-p>'] = { 'show', 'select_prev', 'fallback' },
+        ['<C-n>'] = { 'show', 'select_next', 'fallback' },
         ['<C-f>'] = { 'select_and_accept', 'fallback' },
         ['<C-u>'] = { 'scroll_documentation_up' },
         ['<C-d>'] = { 'scroll_documentation_down' },
