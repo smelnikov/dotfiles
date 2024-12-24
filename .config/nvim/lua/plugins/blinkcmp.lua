@@ -1,8 +1,7 @@
 return {
   {
     'saghen/blink.cmp',
-    -- use a release tag to download pre-built binaries
-    version = 'v0.*',
+    version = 'v0.8.0',
     opts = {
       keymap = {
         preset = 'default',
