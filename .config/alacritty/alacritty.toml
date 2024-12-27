@@ -75,7 +75,7 @@ key = "F12"
 [mouse]
 hide_when_typing = true
 
-[shell]
+[terminal.shell]
 args = ["-l", "-c", "tmux attach || tmux"]
 program = "/opt/homebrew/bin/fish"
 
@@ -91,3 +91,5 @@ lines = 32
 [window.position]
 x = 2096
 y = 1440
+
+[terminal]
