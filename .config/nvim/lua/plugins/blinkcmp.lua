@@ -1,7 +1,7 @@
 return {
   {
     'saghen/blink.cmp',
-    version = 'v0.8.0',
+    build = 'cargo build --release',
     opts = {
       keymap = {
         preset = 'default',
