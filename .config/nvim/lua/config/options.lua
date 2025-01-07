@@ -40,8 +40,9 @@ vim.opt.shelltemp = false
 vim.opt.mouse = ''
 
 vim.diagnostic.config {
-  virtual_text = false,
   float = { border = 'rounded' },
+  severity_sort = true,
+  virtual_text = false,
 }
 vim.lsp.handlers['textDocument/hover'] =
   vim.lsp.with(vim.lsp.handlers.hover, { border = 'rounded' })
