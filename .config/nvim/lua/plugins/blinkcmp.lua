@@ -24,6 +24,7 @@ return {
         window = { border = 'rounded', scrollbar = false },
       },
       completion = {
+        accept = { auto_brackets = { enabled = false } },
         menu = {
           border = 'rounded',
           scrollbar = false,
