@@ -46,6 +46,13 @@ return {
           window = { border = 'rounded', scrollbar = false },
         },
       },
+      cmdline = {
+        keymap = {
+          ['<C-p>'] = { 'show', 'select_prev', 'fallback' },
+          ['<C-n>'] = { 'show', 'select_next', 'fallback' },
+          ['<C-f>'] = { 'select_and_accept', 'fallback' },
+        },
+      },
     },
   },
 }
