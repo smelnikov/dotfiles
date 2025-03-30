@@ -12,13 +12,9 @@ autocmd('Setup LSP', 'LspAttach', function(event)
   end
 
   lsp_handle_capability(event.buf, client, 'hoverProvider', function()
-    keymap(
-      'LSP: Hover documentation',
-      'n',
-      'K',
-      vim.lsp.buf.hover,
-      { buffer = event.buf }
-    )
+    keymap('LSP: Hover documentation', 'n', 'K', function()
+      vim.lsp.buf.hover { border = 'rounded' }
+    end, { buffer = event.buf })
   end)
 
   lsp_handle_capability(event.buf, client, 'implementationProvider', function()
