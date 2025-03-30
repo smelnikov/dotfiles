@@ -42,7 +42,6 @@ vim.opt.mouse = ''
 vim.diagnostic.config {
   float = { border = 'rounded' },
   severity_sort = true,
-  virtual_text = false,
 }
 
 vim.g.netrw_use_errorwindow = 0
