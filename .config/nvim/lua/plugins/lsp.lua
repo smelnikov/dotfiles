@@ -112,12 +112,7 @@ return {
             }
           end,
           ts_ls = function()
-            require('lspconfig').ts_ls.setup {
-              capabilities,
-              settings = {
-                completions = { completeFunctionCalls = true },
-              },
-            }
+            require('lspconfig').ts_ls.setup { capabilities }
           end,
           yamlls = function()
             require('lspconfig').yamlls.setup {
