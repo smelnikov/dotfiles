@@ -46,3 +46,5 @@ vim.diagnostic.config {
 
 vim.g.netrw_use_errorwindow = 0
 vim.g.netrw_bufsettings = 'noma nomod nu relativenumber nowrap ro nobl'
+
+vim.g.tsc_makeprg = 'npx tsc --noEmit'
