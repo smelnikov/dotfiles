@@ -86,7 +86,7 @@ option_as_alt = "Both"
 
 [window.dimensions]
 columns = 128
-lines = 48
+lines = 32
 
 [window.position]
 x = 2096
