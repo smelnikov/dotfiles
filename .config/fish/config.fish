@@ -11,6 +11,8 @@ set -q VIRTUAL_ENV; and source "$VIRTUAL_ENV/bin/activate.fish"
 
 if status is-interactive
   fish_hybrid_key_bindings
+  bind --user -M insert ctrl-n down-or-search
+
   fish_config theme choose Dracula
 
   set fish_cursor_default block
