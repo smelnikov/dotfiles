@@ -32,6 +32,7 @@ return {
           'cssls',
           'cssmodules_ls',
           'eslint',
+          'gopls',
           'html',
           'jsonls',
           'lua_ls',
@@ -61,6 +62,16 @@ return {
               capabilities,
               settings = {
                 codeActionOnSave = { enable = true, mode = 'all' },
+              },
+            }
+          end,
+          gopls = function()
+            require('lspconfig').gopls.setup {
+              capabilities,
+              settings = {
+                gopls = {
+                  completeFunctionCalls = false,
+                },
               },
             }
           end,
