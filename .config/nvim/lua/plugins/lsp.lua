@@ -1,13 +1,14 @@
 return {
   {
-    'williamboman/mason.nvim',
+    'mason-org/mason.nvim',
     cmd = 'Mason',
     opts = {
       ui = { border = 'rounded' },
     },
   },
   {
-    'williamboman/mason-lspconfig.nvim',
+    'mason-org/mason-lspconfig.nvim',
+    version = '1.*',
     event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
       {
@@ -19,7 +20,7 @@ return {
           },
         },
       },
-      'mason.nvim',
+      'mason-org/mason.nvim',
       'neovim/nvim-lspconfig',
       'b0o/schemastore.nvim',
     },
