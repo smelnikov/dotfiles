@@ -20,7 +20,7 @@ return {
       {
         desc = 'Toggle context',
         'yox',
-        ':TSContextToggle<CR>',
+        ':TSContext toggle<CR>',
         silent = true,
       },
     },
