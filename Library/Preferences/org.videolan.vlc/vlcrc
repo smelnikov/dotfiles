@@ -1835,7 +1835,7 @@
 [auhal] # HAL AudioUnit output
 
 # Audio volume (integer)
-auhal-volume=166
+#auhal-volume=256
 
 # Last audio device (string)
 auhal-audio-device=0
@@ -3026,7 +3026,7 @@ sout-transcode-senc=any
 #sout-avformat-options=
 
 # Reset timestamps (boolean)
-#sout-avformat-reset-ts=0
+#sout-avformat-reset-ts=1
 
 # Advanced options (string)
 #avio-options=
@@ -3705,7 +3705,7 @@ audio-resampler=any
 audio-language=en
 
 # Subtitle language (string)
-sub-language=en,ru
+sub-language=none
 
 # Menu language (string)
 #menu-language=
