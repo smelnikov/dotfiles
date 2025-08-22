@@ -5,6 +5,8 @@ local lsp_handle_capability = require('utils').lsp_handle_capability
 autocmd('Setup LSP', 'LspAttach', function(event)
   local client = vim.lsp.get_client_by_id(event.data.client_id)
 
+  assert(client)
+
   if client.name == 'ruff' then
     client.server_capabilities.hoverProvider = false
     client.server_capabilities.documentFormattingProvider = false
@@ -15,16 +17,6 @@ autocmd('Setup LSP', 'LspAttach', function(event)
     keymap('LSP: Hover documentation', 'n', 'K', function()
       vim.lsp.buf.hover { border = 'rounded' }
     end, { buffer = event.buf })
-  end)
-
-  lsp_handle_capability(event.buf, client, 'implementationProvider', function()
-    keymap(
-      'LSP: Go to implementation',
-      'n',
-      'gi',
-      vim.lsp.buf.implementation,
-      { buffer = event.buf }
-    )
   end)
 
   if client.name == 'eslint' then
@@ -50,7 +42,7 @@ autocmd('Setup LSP', 'LspAttach', function(event)
         vim.lsp.buf.format {
           bufnr = event.buf,
           filter = function(c)
-            return c.supports_method 'textDocument/formatting'
+            return c:supports_method('textDocument/formatting', event.buf)
           end,
         }
       end, { desc = 'Format current buffer using LSP' })
