@@ -55,7 +55,11 @@ return {
           window = { border = 'rounded', scrollbar = false },
         },
       },
+
       cmdline = {
+        completion = {
+          ghost_text = { enabled = false },
+        },
         keymap = {
           ['<C-p>'] = { 'show', 'select_prev', 'fallback' },
           ['<C-n>'] = { 'show', 'select_next', 'fallback' },
