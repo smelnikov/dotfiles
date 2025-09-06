@@ -190,7 +190,7 @@ macosx-interfacestyle=1
 #macosx-large-text=0
 
 # Auto-playback of new items (boolean)
-#macosx-autoplay=1
+macosx-autoplay=0
 
 # Keep Recent Items (boolean)
 #macosx-recentitems=1
@@ -3957,7 +3957,7 @@ vod-server=any
 #start-paused=0
 
 # Auto start (boolean)
-#playlist-autostart=1
+playlist-autostart=0
 
 # Pause on audio communication (boolean)
 #playlist-cork=1
