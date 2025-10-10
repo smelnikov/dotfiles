@@ -25,6 +25,7 @@ return {
     },
     opts = {
       ensure_installed = {
+        'basedpyright',
         'cssls',
         'cssmodules_ls',
         'eslint',
@@ -32,7 +33,6 @@ return {
         'html',
         'jsonls',
         'lua_ls',
-        'pyright',
         'ruff',
         'taplo',
         'ts_ls',
