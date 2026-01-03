@@ -40,30 +40,4 @@ return {
       },
     },
   },
-  {
-    'jayp0521/mason-null-ls.nvim',
-    event = { 'BufReadPre', 'BufNewFile' },
-    dependencies = {
-      'mason.nvim',
-      {
-        'nvimtools/none-ls.nvim',
-        dependencies = { 'nvim-lua/plenary.nvim' },
-        opts = function()
-          local f = require('null-ls').builtins.formatting
-          return {
-            sources = {
-              f.black,
-              f.isort,
-              f.prettier,
-              f.stylua,
-            },
-          }
-        end,
-      },
-    },
-    opts = {
-      ensure_installed = nil,
-      automatic_installation = true,
-    },
-  },
 }
