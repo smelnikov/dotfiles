@@ -23,16 +23,4 @@ function M.autocmd(desc, event, callbackOrCommand, opts)
   vim.api.nvim_create_autocmd(event, opts)
 end
 
-function M.lsp_handle_capability(bufnr, client, capability, callback)
-  local handled_flag_key = 'config_lsp_attach_handled_' .. capability
-
-  if
-    not vim.b[bufnr][handled_flag_key]
-    and client.server_capabilities[capability]
-  then
-    vim.b[bufnr][handled_flag_key] = true
-    callback()
-  end
-end
-
 return M

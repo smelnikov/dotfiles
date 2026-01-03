@@ -11,3 +11,7 @@ keymap('Scroll upwards', 'n', '<C-u>', '<C-u>zz')
 keymap('Go to EOF', 'n', 'G', 'Gzz')
 
 keymap('Yank to clip', { 'n', 'v' }, '<leader>y', '"+y')
+
+keymap('LSP: Hover Documentation', 'n', 'K', function()
+  vim.lsp.buf.hover { border = 'rounded' }
+end)
