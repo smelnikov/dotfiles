@@ -12,20 +12,26 @@ return {
       lualine_bg_color = 'none',
       overrides = {
         HarpoonBorder = { link = 'FloatBorder' },
+
         TelescopePromptBorder = { link = 'FloatBorder' },
         TelescopeResultsBorder = { link = 'FloatBorder' },
         TelescopePreviewBorder = { link = 'FloatBorder' },
+
         StatusLine = { link = 'CursorLine' },
-        EndOfBuffer = { link = 'LineNr' },
 
         DiffAdd = { bg = '#0f2e08' },
         DiffChange = { bg = '#400706' },
         DiffDelete = { fg = '#841f1a' },
         DiffText = { bg = '#84201a' },
+
         diffFile = { link = 'Comment' },
+
+        EndOfBuffer = { link = 'LineNr' },
+
+        Pmenu = { link = 'NormalFloat' },
+
         WinBar = { link = 'NormalFloat' },
         WinBarNC = { link = 'NormalFloat' },
-        Pmenu = { link = 'NormalFloat' },
       },
     },
     config = function(_, opts)
