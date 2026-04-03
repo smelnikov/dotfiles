@@ -13,12 +13,18 @@ return {
           return {}
         end,
         formatters = {
+          clang_format = {
+            cwd = require('conform.util').root_file { '.clang-format' },
+            require_cwd = true,
+          },
           prettier = {
             require_cwd = true,
           },
         },
         formatters_by_ft = {
           _ = { lsp_format = 'fallback' },
+          c = { 'clang_format' },
+          cpp = { 'clang_format' },
           css = { 'prettier' },
           html = { 'prettier' },
           javascript = { 'eslint', 'prettier' },
