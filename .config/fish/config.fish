@@ -10,7 +10,8 @@ set -gx VIRTUAL_ENV_DISABLE_PROMPT true
 set -q VIRTUAL_ENV; and source "$VIRTUAL_ENV/bin/activate.fish"
 
 if status is-interactive
-  fish_hybrid_key_bindings
+  set --global fish_key_bindings fish_hybrid_key_bindings
+
   bind --user -M insert ctrl-n down-or-search
 
   fish_config theme choose Dracula
